@@ -1,0 +1,14 @@
+---
+- name: Installer Docker sur les Nodes
+  hosts: ec2_instances
+  become: true
+
+  tasks:
+    - name: Copier le script d'installation
+      copy:
+        src: ./install_docker.sh
+        dest: /home/ubuntu/docker.sh
+        mode: '0755'
+
+    - name: Exécuter le script
+      command: /home/ubuntu/docker.sh

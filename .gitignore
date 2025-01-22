@@ -1,0 +1,19 @@
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Terraform lock file
+*.lock.hcl
+
+# Terraform provider caches
+.terraform/
+
+# SSH keys
+ssh-terra
+ssh-terra.pub
+
+# Ansible cache and logs
+*.retry
+
+# Logs
+*.log
